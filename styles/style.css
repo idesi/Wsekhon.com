@@ -1,0 +1,92 @@
+body {
+    line-height: 1;
+    font: 16px/1 "Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #666;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+    min-width: 40px;
+    min-height: 40px;
+}
+
+a {
+    color: #ff0037;
+    text-decoration: none;
+}
+
+section.wrapper {
+    max-width: 720px;
+    margin: 0 auto;
+    padding:  0 40px 20px 40px;
+}
+
+section.wrapper.profile{
+    padding: 100px 40px 0;
+}
+
+section.profile header {
+    text-align: center;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #eee;
+}
+
+.profile h1 {
+    font-weight: 600;
+    letter-spacing: -2px;
+    font-size: 3em;
+    color: #222;
+}
+
+.profile header > a img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.profile .social {
+    margin-top: 20px;
+}
+
+@media (max-width: 360px) {
+    .profile .social img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+.info {
+    display: table;
+    width: 100%;
+    margin: 0;
+}
+
+.project {
+    display: table-row;
+}
+
+.wrapper .project > div {
+    display: table-cell;
+}
+
+.project .header {
+    vertical-align: top;
+}
+
+.project .header {
+    padding-top: 20px;
+    padding-right: 15px;
+}
+
+footer {
+    margin: 100px 0 20px 0;
+    border-top: 1px solid #eee;
+    bottom: 0;
+    padding-top: 40px;
+
+}
+footer .icons-credit {
+    font-size: 10px;
+}
