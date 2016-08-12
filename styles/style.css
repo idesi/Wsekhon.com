@@ -55,13 +55,6 @@ section.profile header {
     }
 }
 
-@media only screen and (max-width: 767px) {
-  .wrapper.projectsList {
-    font-size: 18px;
-  }
-}
-
-
 .info {
     display: table;
     width: 100%;
