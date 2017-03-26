@@ -76,6 +76,7 @@ section.profile header {
 .project .header {
     padding-top: 20px;
     padding-right: 15px;
+    width: 64px;
 }
 
 footer {
