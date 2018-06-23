@@ -21,7 +21,7 @@ section.wrapper {
     padding:  0 40px 20px 40px;
 }
 
-section.wrapper.profile{
+section.wrapper.profile {
     padding: 100px 40px 0;
 }
 
@@ -77,6 +77,37 @@ section.profile header {
     padding-top: 20px;
     padding-right: 15px;
     width: 64px;
+}
+
+.project .details h3 {
+    margin-top: 18px;
+    margin-bottom: 18px;
+    float: left; 
+}
+
+.project .details .summary {
+    clear: both;
+}
+
+.tag {
+    background: #ff0037;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: 12px;
+    margin-top: 16px;
+    margin-left: 10px;
+    float: left;
+}
+
+@media only screen and (max-width: 408px) {
+    .tag {
+        clear: both;
+        margin-top: 0;
+        margin-bottom: 16px;
+        margin-left: 0;
+    }
 }
 
 footer {
