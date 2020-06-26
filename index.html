@@ -8,6 +8,13 @@
         <link href="styles/style.css?v1" rel="stylesheet" />
     </head>
     <body>
+        <section class="themeToggle">
+            <div class="toggle-btn">
+                <input type="checkbox" class="chkTheme" onclick="toggleTheme()">
+                <span></span>
+            </div>
+            <div class="overlay"></div>
+        </section>
         <section class="wrapper profile">
             <header>
                 <a href="#">
@@ -15,7 +22,7 @@
                 </a>
                 <h1>Watandeep Sekhon</h1>
                 <h2>
-                    I'm a software developer & <a href='http://www.frontendmayhem.com' target="_blank">blogger</a>
+                I'm a software developer & <a href="http://www.frontendmayhem.com" target="_blank">blogger</a>
                 </h2>
                 <div class="social">
                     <a href="https://twitter.com/sekhonw" target="_blank">
@@ -99,8 +106,66 @@
         </section>
         <section class="wrapper">
             <footer>
-                <div class="icons-credit">Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a>, <a href="http://www.flaticon.com/authors/madebyoliver" title="Madebyoliver">Madebyoliver</a>, <a href="http://www.flaticon.com/authors/vectors-market" title="Vectors Market">Vectors Market</a>, <a href="http://www.freepik.com" title="Freepik">Freepik</a>, <a href="http://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a>, <a href="http://www.freepik.com" title="Freepik">Freepik</a>   from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+            <div class="icons-credit">Icons made by
+                <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a>,
+                <a href="http://www.flaticon.com/authors/madebyoliver" title="Madebyoliver">Madebyoliver</a>,
+                <a href="http://www.flaticon.com/authors/vectors-market" title="Vectors Market">Vectors Market</a>,
+                <a href="http://www.freepik.com" title="Freepik">Freepik</a>,
+                <a href="http://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a>,
+                <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a>,
+                <a href="http://www.freepik.com" title="Freepik">Freepik</a> from
+                <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by
+                <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+            </div>
             </footer>
         </section>
+    <script>
+        const THEMES  = {
+            LIGHT : 'light',
+            DARK : 'dark'
+        }
+
+        function setTheme(theme) {
+            if (typeof(Storage) === "undefined") {
+                return;
+            }
+
+            // If no theme has been passed in then use whatever is in localstorage
+            // If nothing found in localstorage then default to the light theme
+            if(!theme) {
+                theme = window.localStorage.getItem('theme') || THEMES.LIGHT;
+            }
+            
+            // This will ensure that the theme toggle is in the correct state
+            const themeCheckbox = document.getElementsByClassName('chkTheme')[0];
+            if(themeCheckbox) {
+                themeCheckbox.checked = theme === THEMES.DARK;
+            }
+
+            // This triggers all the theme related style changes
+            const body = document.getElementsByTagName('body')[0];
+            if (body.classList) {
+                body.classList.remove(THEMES.LIGHT, THEMES.DARK);
+                body.classList.add(theme);
+            }
+            
+            window.localStorage.setItem('theme', theme);
+        }
+
+        function toggleTheme() {
+            if (typeof(Storage) === "undefined") {
+                return;
+            } 
+
+            const oldTheme = window.localStorage.getItem('theme');
+            const newTheme = oldTheme === THEMES.DARK ? THEMES.LIGHT : THEMES.DARK;
+
+            setTheme(newTheme);
+        }
+
+        // Set the theme when site loads
+        setTheme();
+    </script>
     </body>
+
 </html>

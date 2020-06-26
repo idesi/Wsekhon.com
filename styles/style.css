@@ -1,122 +1,252 @@
 body {
-    line-height: 1;
-    font: 16px/1 "Helvetica Neue",Helvetica,Arial,sans-serif;
-    color: #666;
-    -webkit-font-smoothing: antialiased;
+  line-height: 1;
+  font: 16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #666;
+  -webkit-font-smoothing: antialiased;
+}
+
+body.dark {
+  background-color: #18181e;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 img {
-    min-width: 40px;
-    min-height: 40px;
+  min-width: 40px;
+  min-height: 40px;
 }
 
 a {
-    color: #ff0037;
-    text-decoration: none;
+  color: #ff0037;
+  text-decoration: none;
+}
+
+.dark a {
+  color: #dec79b;
 }
 
 section.wrapper {
-    max-width: 720px;
-    margin: 0 auto;
-    padding:  0 40px 20px 40px;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 40px 20px 40px;
 }
 
 section.wrapper.profile {
-    padding: 100px 40px 0;
+  padding: 100px 40px 0;
 }
 
 section.profile header {
-    text-align: center;
-    padding-bottom: 40px;
-    border-bottom: 1px solid #eee;
+  text-align: center;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #eee;
 }
 
 .profile h1 {
-    font-weight: 600;
-    letter-spacing: -2px;
-    font-size: 3em;
-    color: #222;
+  font-weight: 600;
+  letter-spacing: -2px;
+  font-size: 3em;
+  color: #222;
+}
+
+.dark .profile h1 {
+  color: #dec79b;
 }
 
 .profile header > a img {
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
 }
 
 .profile .social {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 @media only screen and (max-width: 360px) {
-    .profile .social img {
-        width: 40px;
-        height: 40px;
-    }
+  .profile .social img {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .info {
-    display: table;
-    width: 100%;
-    margin: 0;
+  display: table;
+  width: 100%;
+  margin: 0;
 }
 
 .project {
-    display: table-row;
+  display: table-row;
 }
 
 .wrapper .project > div {
-    display: table-cell;
+  display: table-cell;
 }
 
 .project .header {
-    vertical-align: top;
+  vertical-align: top;
 }
 
 .project .header {
-    padding-top: 20px;
-    padding-right: 15px;
-    width: 64px;
+  padding-top: 20px;
+  padding-right: 15px;
+  width: 64px;
 }
 
 .project .details h3 {
-    margin-top: 18px;
-    margin-bottom: 18px;
-    float: left; 
+  margin-top: 18px;
+  margin-bottom: 18px;
+  float: left;
 }
 
 .project .details .summary {
-    clear: both;
+  clear: both;
 }
 
 .tag {
-    background: #ff0037;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 3px;
-    font-weight: 600;
-    font-size: 12px;
-    margin-top: 16px;
-    margin-left: 10px;
-    float: left;
+  background: #ff0037;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: 12px;
+  margin-top: 16px;
+  margin-left: 10px;
+  float: left;
+}
+
+.tag a {
+  color: white;
 }
 
 @media only screen and (max-width: 408px) {
-    .tag {
-        clear: both;
-        margin-top: 0;
-        margin-bottom: 16px;
-        margin-left: 0;
-    }
+  .tag {
+    clear: both;
+    margin-top: 0;
+    margin-bottom: 16px;
+    margin-left: 0;
+  }
 }
 
 footer {
-    margin: 100px 0 20px 0;
-    border-top: 1px solid #eee;
-    bottom: 0;
-    padding-top: 40px;
-
+  margin: 100px 0 20px 0;
+  border-top: 1px solid #eee;
+  bottom: 0;
+  padding-top: 40px;
 }
+
 footer .icons-credit {
-    font-size: 10px;
+  font-size: 10px;
+}
+
+/* Experiment */
+/* .my-dark-mode .light {
+  width: 110px;
+  background: white;
+  border-radius: 40px;
+  box-sizing: border-box;
+  height: 30px;
+  padding-left: 14px;
+  padding-top: 6px;
+  margin-left: 25px;
+  box-shadow: 0px 2px 25px #d9d9d9;
+}
+
+.my-dark-mode *.hidden {
+  display: none;
+} */
+
+/* Toggle button https://csspoints.com/css-toggle-button/ */
+.themeToggle {
+  padding: 10px 25px;
+}
+
+.toggle-btn {
+  position: relative;
+  width: 100px;
+  height: 35px;
+  margin: 0;
+  border-radius: 40px;
+}
+
+input[type="checkbox"] {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  margin: 0px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+
+.toggle-btn span {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  overflow: hidden;
+  opacity: 1;
+  background-color: #fff;
+  box-shadow: 0px 2px 25px #d9d9d9;
+  border-radius: 40px;
+  transition: 0.2s ease background-color, 0.2s ease opacity;
+}
+.toggle-btn span:before,
+.toggle-btn span:after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  transition: 0.5s ease transform, 0.2s ease background-color;
+}
+.toggle-btn span:before {
+  background-color: #fff;
+  transform: translate(-58px, 0px);
+  z-index: 1;
+}
+.toggle-btn span:after {
+  background-color: #000;
+  transform: translate(8px, 0px);
+  z-index: 0;
+}
+.toggle-btn input[type="checkbox"]:checked + span {
+  background-color: #000;
+}
+.toggle-btn input[type="checkbox"]:active + span {
+  opacity: 0.5;
+}
+.toggle-btn input[type="checkbox"]:checked + span:before {
+  background-color: #000;
+  transform: translate(60px, -10px);
+}
+.toggle-btn input[type="checkbox"]:checked + span:after {
+  background-color: #fff;
+  transform: translate(69px, 0px);
+}
+
+.overlay {
+  position: relative;
+  top: -25px;
+  left: 43px;
+  width: 100px;
+  transition: 0.5s ease transform, 0.2s ease background-color;
+}
+
+.overlay::before {
+  content: "Light";
+}
+
+.dark .overlay {
+  /* left: 20px; */
+  transform: translateX(-20px);
+}
+
+.dark .overlay::before {
+  content: "Dark";
 }
