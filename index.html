@@ -1,159 +1,131 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Watandeep Sekhon</title>
-        <meta name="viewport" content="width=device-width" />
-        <link href="styles/normalize.css" rel="stylesheet" />
-        <link href="styles/style.css?v1" rel="stylesheet" />
-    </head>
-    <body>
-        <section class="themeToggle">
-            <div class="toggle-btn">
-                <input type="checkbox" class="chkTheme" onclick="toggleTheme()">
-                <span></span>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Watandeep Sekhon</title>
+    <meta name="description" content="Watandeep Sekhon is a software developer and blogger. Explore his social links and personal projects: Textifyed, Osm.js, and Log Streak.">
+    <link rel="canonical" href="https://wsekhon.com/">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/Logo_Fotor.jpg">
+    <meta name="theme-color" content="#f7f8fb">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Watandeep Sekhon">
+    <meta property="og:description" content="Software developer and blogger with personal projects including Textifyed, Osm.js, and Log Streak.">
+    <meta property="og:url" content="https://wsekhon.com/">
+    <meta property="og:image" content="https://wsekhon.com/img/Logo_Fotor.jpg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Watandeep Sekhon">
+    <meta name="twitter:description" content="Software developer and blogger with personal projects including Textifyed, Osm.js, and Log Streak.">
+    <meta name="twitter:image" content="https://wsekhon.com/img/Logo_Fotor.jpg">
+    <link href="styles/normalize.css" rel="stylesheet">
+    <link href="styles/style.css?v2" rel="stylesheet">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" aria-label="Site header">
+      <a class="brand-mark" href="#main" aria-label="Watandeep Sekhon home">
+        <img src="img/Logo_Fotor.jpg" width="180" height="180" alt="Watandeep Sekhon">
+      </a>
+    </header>
+
+    <main id="main" class="page-shell">
+      <section class="hero" aria-labelledby="hero-title">
+        <img class="hero__avatar" src="img/Logo_Fotor.jpg" width="180" height="180" alt="Watandeep Sekhon">
+        <h1 id="hero-title">Watandeep Sekhon</h1>
+        <p class="hero__subtitle">
+          I'm a software developer &amp; <a href="https://blog.wsekhon.com" target="_blank" rel="noopener noreferrer">blogger</a>
+        </p>
+
+        <nav class="social-links" aria-label="Social links">
+          <a href="https://twitter.com/sekhonw" target="_blank" rel="noopener noreferrer">
+            <img src="img/twitter.png" width="64" height="64" alt="" aria-hidden="true">
+            <span>X</span>
+          </a>
+          <a href="https://github.com/idesi" target="_blank" rel="noopener noreferrer">
+            <img src="img/github-logo.png" width="64" height="64" alt="" aria-hidden="true">
+            <span>GitHub</span>
+          </a>
+          <a href="https://www.linkedin.com/in/watan" target="_blank" rel="noopener noreferrer">
+            <img src="img/linkedin.png" width="64" height="64" alt="" aria-hidden="true">
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://bsky.app/profile/wsekhon.bsky.social" target="_blank" rel="noopener noreferrer">
+            <img src="img/bluesky.png" width="64" height="64" alt="" aria-hidden="true">
+            <span>Bluesky</span>
+          </a>
+          <a href="https://www.instagram.com/watan.codes/" target="_blank" rel="noopener noreferrer">
+            <img src="img/instagram.png" width="64" height="64" alt="" aria-hidden="true">
+            <span>Instagram</span>
+          </a>
+        </nav>
+      </section>
+
+      <section class="projects" aria-labelledby="projects-title">
+        <p class="section-kicker">Projects</p>
+        <h2 id="projects-title">Personal Projects</h2>
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-card__icon" aria-hidden="true">
+              <img src="img/computer.png" width="64" height="64" alt="">
             </div>
-            <div class="overlay"></div>
-        </section>
-        <section class="wrapper profile">
-            <header>
-                <a href="#">
-                    <img src="img/Logo_Fotor.jpg" />
-                </a>
-                <h1>Watandeep Sekhon</h1>
-                <h2>
-                I'm a software developer & <a href="https://blog.wsekhon.com" target="_blank">blogger</a>
-                </h2>
-                <div class="social">
-                    <a href="https://twitter.com/sekhonw" target="_blank">
-                        <img src="img/twitter.png" />
-                    </a>
-                    <a href="https://github.com/idesi" target="_blank">
-                        <img src="img/github-logo.png" />
-                    </a>
-                    <a href="https://www.linkedin.com/in/watan" target="_blank">
-                        <img src="img/linkedin.png" />
-                    </a>
-                    <a href="https://bsky.app/profile/wsekhon.bsky.social" target="_blank">
-                        <img src="img/bluesky.png" />
-                    </a>
-                    <a href="https://www.instagram.com/watan.codes/" target="_blank">
-                        <img src="img/instagram.png" />
-                    </a>
-                </div>
-            </header>
-        </section>
-        <section class="wrapper projectsList">
-            <p>Personal Projects</p>
-            <div class="info">
-                <div class="project">
-                    <div class="header">
-                        <img src="img/computer.png" />
-                    </div>
-                    <div class="details">
-                        <h3>Textifyed</h3>
-                        <p class="summary">
-                            A simple jQuery plug-in with TinyMCE support which helps you manage textareas on the page.
-                        </p>
-                        <a href="https://github.com/idesi/textifyed" target="_blank">Source</a> | <a target="_blank" href="https://idesi.github.io/textifyed/">Demo</a>
-                    </div>
-                </div>
+            <div class="project-card__body">
+              <h3>Textifyed</h3>
+              <p>A simple jQuery plug-in with TinyMCE support which helps you manage textareas on the page.</p>
             </div>
-            <br />
-            <div class="info">
-                <div class="project">
-                    <div class="header">
-                        <img src="img/osm.png" />
-                    </div>
-                    <div class="details">
-                        <h3>Osm.js</h3>
-                        <p class="summary">
-                            <p>A modern JavaScript library which offers utility functions for objects.</p>
-                            <p>Osm.js aims to improve consistency & predictability by following functional programming paradigms such as immutability & currying.</p>
-                        </p>
-                        <a href="https://github.com/idesi/Osm.js" target="_blank">Source</a>
-                    </div>
-                </div>
+            <div class="project-card__actions">
+              <a href="https://github.com/idesi/textifyed" target="_blank" rel="noopener noreferrer">Source</a>
+              <a href="https://idesi.github.io/textifyed/" target="_blank" rel="noopener noreferrer">Demo</a>
             </div>
-            <br />
-            <div class="info">
-                <div class="project">
-                    <div class="header">
-                        <img src="img/stopwatch.png" />
-                    </div>
-                    <div class="details">
-                        <h3>Log Streak</h3>
-                        <span class="tag">Progressive Web App</span>
-                        <p class="summary">
-                            <p>An easy solution for individuals to log their daily working hours.</p>
-                        </p>
-                        <a href="https://github.com/idesi/hourstracker" target="_blank">Source</a> | <a target="_blank" href="https://logstreak.wsekhon.com/">Demo</a>
-                    </div>
-                </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__icon" aria-hidden="true">
+              <img src="img/osm.png" width="64" height="64" alt="">
             </div>
-        </section>
-        <section class="wrapper">
-            <footer>
-            <div class="icons-credit">Icons made by
-                <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a>,
-                <a href="https://www.flaticon.com/authors/madebyoliver" title="Madebyoliver">Madebyoliver</a>,
-                <a href="https://www.flaticon.com/authors/vectors-market" title="Vectors Market">Vectors Market</a>,
-                <a href="https://www.freepik.com" title="Freepik">Freepik</a>,
-                <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a>,
-                <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a>,
-                <a href="https://www.freepik.com" title="Freepik">Freepik</a> from
-                <a href="https://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by
-                <a href="https://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+            <div class="project-card__body">
+              <h3>Osm.js</h3>
+              <p>A modern JavaScript library which offers utility functions for objects.</p>
+              <p>Osm.js aims to improve consistency &amp; predictability by following functional programming paradigms such as immutability &amp; currying.</p>
             </div>
-            </footer>
-        </section>
-    <script>
-        const THEMES  = {
-            LIGHT : 'light',
-            DARK : 'dark'
-        }
+            <div class="project-card__actions">
+              <a href="https://github.com/idesi/Osm.js" target="_blank" rel="noopener noreferrer">Source</a>
+            </div>
+          </article>
 
-        function setTheme(theme) {
-            if (typeof(Storage) === "undefined") {
-                return;
-            }
+          <article class="project-card">
+            <div class="project-card__icon" aria-hidden="true">
+              <img src="img/stopwatch.png" width="64" height="64" alt="">
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__title-row">
+                <h3>Log Streak</h3>
+                <span class="tag">Progressive Web App</span>
+              </div>
+              <p>An easy solution for individuals to log their daily working hours.</p>
+            </div>
+            <div class="project-card__actions">
+              <a href="https://github.com/idesi/hourstracker" target="_blank" rel="noopener noreferrer">Source</a>
+              <a href="https://logstreak.wsekhon.com/" target="_blank" rel="noopener noreferrer">Demo</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
 
-            // If no theme has been passed in then use whatever is in localstorage
-            // If nothing found in localstorage then default to the light theme
-            if(!theme) {
-                theme = window.localStorage.getItem('theme') || THEMES.LIGHT;
-            }
-            
-            // This will ensure that the theme toggle is in the correct state
-            const themeCheckbox = document.getElementsByClassName('chkTheme')[0];
-            if(themeCheckbox) {
-                themeCheckbox.checked = theme === THEMES.DARK;
-            }
-
-            // This triggers all the theme related style changes
-            const body = document.getElementsByTagName('body')[0];
-            if (body.classList) {
-                body.classList.remove(THEMES.LIGHT, THEMES.DARK);
-                body.classList.add(theme);
-            }
-            
-            window.localStorage.setItem('theme', theme);
-        }
-
-        function toggleTheme() {
-            if (typeof(Storage) === "undefined") {
-                return;
-            } 
-
-            const oldTheme = window.localStorage.getItem('theme');
-            const newTheme = oldTheme === THEMES.DARK ? THEMES.LIGHT : THEMES.DARK;
-
-            setTheme(newTheme);
-        }
-
-        // Set the theme when site loads
-        setTheme();
-    </script>
-    </body>
-
+    <footer class="site-footer">
+      <div class="icons-credit">Icons made by
+        <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a>,
+        <a href="https://www.flaticon.com/authors/madebyoliver" title="Madebyoliver">Madebyoliver</a>,
+        <a href="https://www.flaticon.com/authors/vectors-market" title="Vectors Market">Vectors Market</a>,
+        <a href="https://www.freepik.com" title="Freepik">Freepik</a>,
+        <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a>,
+        <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a>,
+        <a href="https://www.freepik.com" title="Freepik">Freepik</a> from
+        <a href="https://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by
+        <a href="https://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank" rel="noopener noreferrer">CC 3.0 BY</a>
+      </div>
+    </footer>
+  </body>
 </html>
